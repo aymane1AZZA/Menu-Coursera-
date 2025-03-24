@@ -1,0 +1,115 @@
+/* Réinitialisation des marges et des espacements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style du corps de la page */
+  body {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  /* Style du titre principal */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  /* Conteneur principal */
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Styles généraux des éléments du menu */
+  .menu-item {
+    background-color: #d3d3d3;
+    padding: 20px;
+    border: 1px solid #333;
+    position: relative;
+    min-width: 280px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Suppression de border-radius pour des coins à angle droit */
+    border-radius: 0;
+  }
+  
+  /* Style des titres des sections */
+  .item-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px; /* Vous pouvez garder un border-radius sur les titres si vous le souhaitez */
+  }
+  
+  /* Style du texte descriptif */
+  .menu-item p {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Couleurs spécifiques pour chaque type de plat */
+  .chicken {
+    background-color: #9FE2BF;
+  }
+  .beef {
+    background-color: #DE3163;
+  }
+  .sushi {
+    background-color: #CCCCFF;
+  }
+  
+  /* Couleur des titres des sections */
+  .chicken .item-title {
+    background-color: #7f8c8d;
+  }
+  .beef .item-title {
+    background-color: #7f8c8d;
+  }
+  .sushi .item-title {
+    background-color: #7f8c8d;
+  }
+  
+  /* Media Queries pour les différentes tailles d'écran */
+  
+  /* Bureau : 3 colonnes */
+  @media (min-width: 992px) {
+    .menu-item {
+      width: 32%;
+    }
+  }
+  
+  /* Tablette : 2 colonnes avec une ligne pleine largeur */
+  @media (max-width: 991px) {
+    .menu-container {
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .menu-item {
+      width: 48%;
+      margin-bottom: 15px;
+    }
+  
+    /* La troisième section occupe toute la largeur */
+    .menu-item:nth-child(3) {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile : 1 seule colonne */
+  @media (max-width: 767px) {
+    .menu-item {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  
